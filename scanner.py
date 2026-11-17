@@ -11,13 +11,7 @@ MAX_EUR = 39.0
 BATCH_SIZE = 40
 PAUSE = 3
 
-# Regioni USA ed Europa supportate da Yahoo Finance
-REGIONS = [
-    "us", "gb", "de", "fr", "it", "ch", "nl",
-    "be", "es", "pt", "at", "ie", "dk", "se",
-    "no", "fi", "pl", "gr", "cz", "hu", "ro",
-    "is", "ee", "lt", "lv"
-]
+REGIONS = ["us"]
 
 def get_universe():
     stocks = {}
