@@ -26,7 +26,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run scanner
-        run: python scanner.py
+        run: python -u scanner.py
 
       - name: Save results
         run: |
