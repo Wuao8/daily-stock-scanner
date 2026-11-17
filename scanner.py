@@ -13,56 +13,45 @@ PAUSE = 3
 
 REGIONS = ["us"]
 
+
 def get_universe():
-    stocks = {}
-    failed_regions = []
+    print("TEST USA: contatto Yahoo Finance...", flush=True)
 
-    print("Ricerca automatica delle azioni...")
+    try:
+        query = yf.EquityQuery("eq", ["region", "us"])
 
-    for region in REGIONS:
-        offset = 0
+        print("Richiedo i primi 250 titoli...", flush=True)
 
-        try:
-            while True:
-                query = yf.EquityQuery(
-                    "eq", ["region", region]
-                )
+        result = yf.screen(
+            query,
+            offset=0,
+            size=250
+        )
 
-                result = yf.screen(
-                    query,
-                    offset=offset,
-                    size=250
-                )
+        quotes = result.get("quotes", [])
 
-                quotes = result.get("quotes", [])
+        stocks = {}
 
-                for q in quotes:
-                    symbol = q.get("symbol")
-                    currency = q.get("currency")
+        for q in quotes:
+            symbol = q.get("symbol")
+            currency = q.get("currency")
 
-                    if symbol and currency:
-                        stocks[symbol] = {
-                            "name": q.get("longName")
-                                     or q.get("shortName")
-                                     or symbol,
-                            "currency": currency,
-                            "region": region
-                        }
+            if symbol and currency:
+                stocks[symbol] = {
+                    "name": q.get("longName") or symbol,
+                    "currency": currency,
+                    "region": "us"
+                }
 
-                if len(quotes) < 250:
-                    break
+        print("Risposta ricevuta!", flush=True)
+        print("Titoli trovati:", len(stocks), flush=True)
 
-                offset += 250
-                time.sleep(PAUSE)
+        return stocks, []
 
-        except Exception as e:
-            print(f"Errore regione {region}: {e}")
-            failed_regions.append(region)
+    except Exception as e:
+        print("ERRORE YAHOO:", repr(e), flush=True)
+        return {}, ["us"]
 
-        print(region, ":", len(stocks), "titoli raccolti")
-        time.sleep(PAUSE)
-
-    return stocks, failed_regions
 
 
 
