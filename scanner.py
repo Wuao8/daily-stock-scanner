@@ -71,21 +71,27 @@ def get_universe():
     return stocks, failed_regions
 
 
+
 def get_eur_rate(currency):
     if currency == "EUR":
         return 1.0
 
+    divisor = 100 if currency in ("GBp", "GBX") else 1
+    base_currency = "GBP" if divisor == 100 else currency
+
     try:
-        pair = f"{currency}EUR=X"
+        pair = f"{base_currency}EUR=X"
         data = yf.Ticker(pair).history(period="5d")
 
         if data.empty:
             return None
 
-        return float(data["Close"].dropna().iloc[-1])
+        rate = float(data["Close"].dropna().iloc[-1])
+        return rate / divisor
 
     except Exception:
         return None
+
 
 
 def check_signals(df):
