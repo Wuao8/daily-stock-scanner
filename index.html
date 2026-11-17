@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Stock Scanner</title>
+
+<style>
+body {
+    background: #10141c;
+    color: #e8edf5;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 25px;
+}
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+h1 { color: #fff; }
+.info {
+    color: #9ba9bd;
+    margin-bottom: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+th, td {
+    padding: 13px;
+    text-align: left;
+    border-bottom: 1px solid #293342;
+}
+th { color: #8fa9c9; }
+tr:hover { background: #1b2533; }
+.green { color: #36d399; }
+.red { color: #ff7070; }
+.status {
+    padding: 15px;
+    background: #1b2533;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+input {
+    padding: 10px;
+    background: #1b2533;
+    border: 1px solid #39485b;
+    color: white;
+    border-radius: 5px;
+    width: 220px;
+}
+button {
+    padding: 10px 18px;
+    background: #2476d2;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>DAILY STOCK SCANNER</h1>
+<div class="info">USA + EUROPA | EMA 20 + MACD 12,26,9</div>
+
+<input id="filter" placeholder="Cerca ticker o azienda...">
+<button onclick="loadData()">Aggiorna</button>
+
+<div class="status" id="status">Caricamento...</div>
+
+<table>
+<thead>
+<tr>
+<th>Titolo</th>
+<th>Ticker</th>
+<th>Prezzo</th>
+<th>Prezzo EUR</th>
+<th>EMA 20</th>
+<th>MACD</th>
+<th>Data</th>
+</tr>
+</thead>
+<tbody id="results"></tbody>
+</table>
+
+</div>
+
+<script>
+let allResults = [];
+
+async function loadData() {
+    try {
+        const response = await fetch(
+            "results.json?t=" + Date.now()
+        );
+
+        if (!response.ok) throw new Error("Dati non disponibili");
+
+        const data = await response.json();
+        allResults = data.results || [];
+
+        document.getElementById("status").innerHTML =
+            "Aggiornamento: " + data.updated +
+            "<br>Titoli nell'universo: " + data.total_found +
+            "<br>Titoli analizzati: " + data.checked +
+            "<br>Errori: " + data.errors +
+            "<br>Segnali trovati: " + data.total_found * 0 +
+            allResults.length +
+            "<br>Scansione completa: " +
+            (data.complete ? "SÌ" : "NO");
+
+        renderResults();
+
+    } catch (error) {
+        document.getElementById("status").innerText =
+            "Errore: " + error.message;
+    }
+}
+
+function renderResults() {
+    const filter = document.getElementById("filter")
+        .value.toLowerCase();
+
+    const filtered = allResults.filter(item =>
+        item.symbol.toLowerCase().includes(filter) ||
+        item.name.toLowerCase().includes(filter)
+    );
+
+    document.getElementById("results").innerHTML =
+        filtered.map(item => `
+        <tr>
+            <td>${item.name}</td>
+            <td>${item.symbol}</td>
+            <td>${item.price} ${item.currency}</td>
+            <td>${item.price_eur} €</td>
+            <td class="green">CROSS UP</td>
+            <td class="green">CROSS UP</td>
+            <td>${item.date}</td>
+        </tr>
+        `).join("");
+}
+
+document.getElementById("filter")
+    .addEventListener("input", renderResults);
+
+loadData();
+</script>
+</body>
+</html>
