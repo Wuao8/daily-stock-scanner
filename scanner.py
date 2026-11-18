@@ -6,14 +6,14 @@ from datetime import datetime, timezone
 import yfinance as yf
 import pandas as pd
 
-# CONFIGURAZIONE 
+# CONFIGURAZIONE
 MIN_EUR = 19.0
 MAX_EUR = 39.0
 BATCH_SIZE = 40
 PAUSE = 3
 SCREEN_SIZE = 250
 
-# MERCATI USA ED EUROPEI
+# USA + EUROPA
 REGIONS = [
     "us",
     "gb", "de", "fr", "it", "es",
@@ -116,18 +116,31 @@ def check_signals(df):
     if len(close) < 60:
         return None
 
-    ema20 = close.ewm(
-        span=20,
+    # CALCOLO MACD
+    ema12 = close.ewm(
+        span=12,
         adjust=False
     ).mean()
 
-    # CROSS RIALZISTA EMA20 DAILY
-    ema_cross = (
-        close.iloc[-2] <= ema20.iloc[-2]
-        and close.iloc[-1] > ema20.iloc[-1]
+    ema26 = close.ewm(
+        span=26,
+        adjust=False
+    ).mean()
+
+    macd = ema12 - ema26
+
+    signal = macd.ewm(
+        span=9,
+        adjust=False
+    ).mean()
+
+    # CROSS RIALZISTA MACD / SIGNAL
+    macd_cross = (
+        macd.iloc[-2] <= signal.iloc[-2]
+        and macd.iloc[-1] > signal.iloc[-1]
     )
 
-    if ema_cross:
+    if macd_cross:
         return float(close.iloc[-1])
 
     return None
@@ -198,8 +211,8 @@ def main():
                             "price": round(price, 4),
                             "price_eur": round(price_eur, 2),
                             "date": str(df.index[-1].date()),
-                            "ema20": True,
-                            "macd": None
+                            "ema20": None,
+                            "macd": True
                         })
 
                     checked += 1
