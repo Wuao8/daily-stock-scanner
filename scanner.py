@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 import yfinance as yf
 import pandas as pd
 
-# CONFIGURAZIONE
+# CONFIGURAZIONE 
 MIN_EUR = 19.0
 MAX_EUR = 39.0
 BATCH_SIZE = 40
