@@ -1,3 +1,4 @@
+
 import json
 import time
 from datetime import datetime, timezone
@@ -10,49 +11,78 @@ MIN_EUR = 19.0
 MAX_EUR = 39.0
 BATCH_SIZE = 40
 PAUSE = 3
+SCREEN_SIZE = 250
 
-REGIONS = ["us"]
+# MERCATI USA ED EUROPEI
+REGIONS = [
+    "us",
+    "gb", "de", "fr", "it", "es",
+    "nl", "ch", "se", "no", "dk",
+    "fi", "be", "at", "pt", "ie",
+    "pl", "gr", "cz", "hu"
+]
 
 
 def get_universe():
-    print("TEST USA: contatto Yahoo Finance...", flush=True)
+    stocks = {}
+    failed_regions = []
 
-    try:
-        query = yf.EquityQuery("eq", ["region", "us"])
+    for region in REGIONS:
+        print(f"Ricerca mercato: {region.upper()}...", flush=True)
 
-        print("Richiedo i primi 250 titoli...", flush=True)
+        try:
+            query = yf.EquityQuery(
+                "eq", ["region", region]
+            )
 
-        result = yf.screen(
-            query,
-            offset=0,
-            size=250
-        )
+            offset = 0
 
-        quotes = result.get("quotes", [])
+            while True:
+                result = yf.screen(
+                    query,
+                    offset=offset,
+                    size=SCREEN_SIZE
+                )
 
-        stocks = {}
+                quotes = result.get("quotes", [])
 
-        for q in quotes:
-            symbol = q.get("symbol")
-            currency = q.get("currency")
+                if not quotes:
+                    break
 
-            if symbol and currency:
-                stocks[symbol] = {
-                    "name": q.get("longName") or symbol,
-                    "currency": currency,
-                    "region": "us"
-                }
+                for q in quotes:
+                    symbol = q.get("symbol")
+                    currency = q.get("currency")
 
-        print("Risposta ricevuta!", flush=True)
-        print("Titoli trovati:", len(stocks), flush=True)
+                    if symbol and currency:
+                        stocks[symbol] = {
+                            "name": q.get("longName") or symbol,
+                            "currency": currency,
+                            "region": region
+                        }
 
-        return stocks, []
+                print(
+                    f"{region.upper()}: "
+                    f"{len(quotes)} titoli ricevuti",
+                    flush=True
+                )
 
-    except Exception as e:
-        print("ERRORE YAHOO:", repr(e), flush=True)
-        return {}, ["us"]
+                if len(quotes) < SCREEN_SIZE:
+                    break
 
+                offset += len(quotes)
 
+            time.sleep(1)
+
+        except Exception as e:
+            print(
+                f"ERRORE {region.upper()}: {repr(e)}",
+                flush=True
+            )
+            failed_regions.append(region)
+
+    print("Totale titoli:", len(stocks), flush=True)
+
+    return stocks, failed_regions
 
 
 def get_eur_rate(currency):
@@ -70,11 +100,11 @@ def get_eur_rate(currency):
             return None
 
         rate = float(data["Close"].dropna().iloc[-1])
+
         return rate / divisor
 
     except Exception:
         return None
-
 
 
 def check_signals(df):
@@ -91,34 +121,13 @@ def check_signals(df):
         adjust=False
     ).mean()
 
-    ema12 = close.ewm(
-        span=12,
-        adjust=False
-    ).mean()
-
-    ema26 = close.ewm(
-        span=26,
-        adjust=False
-    ).mean()
-
-    macd = ema12 - ema26
-    signal = macd.ewm(
-        span=9,
-        adjust=False
-    ).mean()
-
-    # Ultima candela contro la precedente
+    # CROSS RIALZISTA EMA20 DAILY
     ema_cross = (
         close.iloc[-2] <= ema20.iloc[-2]
         and close.iloc[-1] > ema20.iloc[-1]
     )
 
-    macd_cross = (
-        macd.iloc[-2] <= signal.iloc[-2]
-        and macd.iloc[-1] > signal.iloc[-1]
-    )
-
-    if ema_cross and macd_cross:
+    if ema_cross:
         return float(close.iloc[-1])
 
     return None
@@ -132,6 +141,8 @@ def main():
     results = []
     errors = 0
     checked = 0
+
+    rate_cache = {}
 
     symbols = list(stocks.keys())
 
@@ -167,7 +178,11 @@ def main():
                         continue
 
                     currency = stocks[symbol]["currency"]
-                    rate = get_eur_rate(currency)
+
+                    if currency not in rate_cache:
+                        rate_cache[currency] = get_eur_rate(currency)
+
+                    rate = rate_cache[currency]
 
                     if rate is None:
                         errors += 1
@@ -184,7 +199,7 @@ def main():
                             "price_eur": round(price_eur, 2),
                             "date": str(df.index[-1].date()),
                             "ema20": True,
-                            "macd": True
+                            "macd": None
                         })
 
                     checked += 1
