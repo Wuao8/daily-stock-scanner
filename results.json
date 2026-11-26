@@ -1,9 +1,955 @@
 {
-  "updated": "2026-11-18T03:48:37.736445+00:00",
-  "total_found": 250,
-  "checked": 250,
+  "updated": "2026-11-26T07:27:49.683459+00:00",
+  "total_found": 61214,
+  "checked": 61214,
   "errors": 0,
-  "failed_regions": [],
-  "complete": true,
-  "results": []
+  "failed_regions": [
+    "us",
+    "de",
+    "fr",
+    "it"
+  ],
+  "complete": false,
+  "results": [
+    {
+      "symbol": "WBI",
+      "name": "WaterBridge Infrastructure LLC",
+      "currency": "USD",
+      "price": 26.13,
+      "price_eur": 23.83,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "VERA",
+      "name": "Vera Therapeutics, Inc.",
+      "currency": "USD",
+      "price": 29.5,
+      "price_eur": 26.9,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "VCYT",
+      "name": "Veracyte, Inc.",
+      "currency": "USD",
+      "price": 25.94,
+      "price_eur": 23.66,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "UMBFO",
+      "name": "UMB Financial Corporation",
+      "currency": "USD",
+      "price": 25.26,
+      "price_eur": 23.04,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "TSSD",
+      "name": "Truth Social American Security & Defense ETF",
+      "currency": "USD",
+      "price": 28.655,
+      "price_eur": 26.13,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "TSRS",
+      "name": "Truth Social American Red State REITs ETF",
+      "currency": "USD",
+      "price": 25.789,
+      "price_eur": 23.52,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "TRNZ",
+      "name": "Trinity Capital Inc.",
+      "currency": "USD",
+      "price": 25.33,
+      "price_eur": 23.1,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "TPLKF",
+      "name": "PVA TePla AG",
+      "currency": "USD",
+      "price": 28.9,
+      "price_eur": 26.36,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "TDS",
+      "name": "Telephone and Data Systems, Inc.",
+      "currency": "USD",
+      "price": 31.88,
+      "price_eur": 29.07,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "TCMD",
+      "name": "Tactile Systems Technology, Inc.",
+      "currency": "USD",
+      "price": 27.6,
+      "price_eur": 25.17,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "TABD",
+      "name": "TABD",
+      "currency": "USD",
+      "price": 24.13,
+      "price_eur": 22.01,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "STAG",
+      "name": "STAG Industrial, Inc.",
+      "currency": "USD",
+      "price": 37.95,
+      "price_eur": 34.61,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "SOJF",
+      "name": "SOJF",
+      "currency": "USD",
+      "price": 22.01,
+      "price_eur": 20.07,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "SOBO",
+      "name": "South Bow Corporation",
+      "currency": "USD",
+      "price": 33.36,
+      "price_eur": 30.42,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "SNEJF",
+      "name": "Sony Group Corporation",
+      "currency": "USD",
+      "price": 27.59,
+      "price_eur": 25.16,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "SMID",
+      "name": "Smith-Midland Corporation",
+      "currency": "USD",
+      "price": 23.48,
+      "price_eur": 21.41,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "SCCG",
+      "name": "SCCG",
+      "currency": "USD",
+      "price": 24.0248,
+      "price_eur": 21.91,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "SBLK",
+      "name": "Star Bulk Carriers Corp.",
+      "currency": "USD",
+      "price": 27.22,
+      "price_eur": 24.82,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "SABK",
+      "name": "South Atlantic Bancshares, Inc.",
+      "currency": "USD",
+      "price": 24.114,
+      "price_eur": 21.99,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "RWCB",
+      "name": "Redwood Capital Bancorp",
+      "currency": "USD",
+      "price": 35.0,
+      "price_eur": 31.92,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "RTO",
+      "name": "Rentokil Initial plc",
+      "currency": "USD",
+      "price": 24.88,
+      "price_eur": 22.69,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "REYN",
+      "name": "Reynolds Consumer Products Inc.",
+      "currency": "USD",
+      "price": 25.58,
+      "price_eur": 23.33,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "REXR-PB",
+      "name": "Rexford Industrial Realty, Inc.",
+      "currency": "USD",
+      "price": 21.18,
+      "price_eur": 19.32,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "RDN",
+      "name": "Radian Group Inc.",
+      "currency": "USD",
+      "price": 37.21,
+      "price_eur": 33.94,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "PTBS",
+      "name": "Potomac Bancshares, Inc.",
+      "currency": "USD",
+      "price": 26.5,
+      "price_eur": 24.17,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "PNFP-PB",
+      "name": "Pinnacle Financial Partners, Inc.",
+      "currency": "USD",
+      "price": 25.4499,
+      "price_eur": 23.21,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "PHVS",
+      "name": "Pharvaris N.V.",
+      "currency": "USD",
+      "price": 34.06,
+      "price_eur": 31.06,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "PFX",
+      "name": "PhenixFIN Corporation",
+      "currency": "USD",
+      "price": 40.17,
+      "price_eur": 36.64,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "PAR",
+      "name": "PAR Technology Corporation",
+      "currency": "USD",
+      "price": 23.67,
+      "price_eur": 21.59,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "OXLCI",
+      "name": "Oxford Lane Capital Corp.",
+      "currency": "USD",
+      "price": 25.33,
+      "price_eur": 23.1,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "OPLN",
+      "name": "OPENLANE, Inc.",
+      "currency": "USD",
+      "price": 35.79,
+      "price_eur": 32.64,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "OMRNY",
+      "name": "OMRON Corporation",
+      "currency": "USD",
+      "price": 28.09,
+      "price_eur": 25.62,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "OII",
+      "name": "Oceaneering International, Inc.",
+      "currency": "USD",
+      "price": 32.83,
+      "price_eur": 29.94,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "OCTV",
+      "name": "Octave Intelligence plc",
+      "currency": "USD",
+      "price": 22.55,
+      "price_eur": 20.57,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "NYNOF",
+      "name": "Nynomic AG",
+      "currency": "USD",
+      "price": 23.7,
+      "price_eur": 21.61,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "NSSC",
+      "name": "Napco Security Technologies, Inc.",
+      "currency": "USD",
+      "price": 30.49,
+      "price_eur": 27.81,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "NSLRL",
+      "name": "SuRo Capital Corp. 6.00% Notes due 2026",
+      "currency": "USD",
+      "price": 25.23,
+      "price_eur": 23.01,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "NRILY",
+      "name": "Nomura Research Institute, Ltd.",
+      "currency": "USD",
+      "price": 41.2,
+      "price_eur": 37.57,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "NMFCZ",
+      "name": "New Mountain Finance Corporation 8.250% Notes due 2028",
+      "currency": "USD",
+      "price": 25.12,
+      "price_eur": 22.91,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "NKTR",
+      "name": "Nektar Therapeutics",
+      "currency": "USD",
+      "price": 32.62,
+      "price_eur": 29.75,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "NEWTH",
+      "name": "NewtekOne, Inc.",
+      "currency": "USD",
+      "price": 24.53,
+      "price_eur": 22.37,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "NEWTG",
+      "name": "NewtekOne, Inc. 8.50% Fixed Rate Senior Notes due 2029",
+      "currency": "USD",
+      "price": 24.89,
+      "price_eur": 22.7,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "NDEKY",
+      "name": "Nitto Denko Corporation",
+      "currency": "USD",
+      "price": 22.24,
+      "price_eur": 20.28,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "NBHC",
+      "name": "National Bank Holdings Corporation",
+      "currency": "USD",
+      "price": 36.61,
+      "price_eur": 33.39,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "NAVN",
+      "name": "Navan, Inc.",
+      "currency": "USD",
+      "price": 27.11,
+      "price_eur": 24.72,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "MYE",
+      "name": "Myers Industries, Inc.",
+      "currency": "USD",
+      "price": 27.49,
+      "price_eur": 25.07,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "MTCH",
+      "name": "MTCH",
+      "currency": "USD",
+      "price": 41.07,
+      "price_eur": 37.46,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "MSADY",
+      "name": "MS&AD Insurance Group Holdings, Inc.",
+      "currency": "USD",
+      "price": 34.3,
+      "price_eur": 31.28,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "MS-PQ",
+      "name": "Morgan Stanley",
+      "currency": "USD",
+      "price": 23.25,
+      "price_eur": 21.2,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "METCI",
+      "name": "Ramaco Resources, Inc.",
+      "currency": "USD",
+      "price": 24.62,
+      "price_eur": 22.45,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "MER-PK",
+      "name": "Merrill Lynch Capital Trust I GTD CAP 6.45%",
+      "currency": "USD",
+      "price": 22.4,
+      "price_eur": 20.43,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "MAIR",
+      "name": "Madison Air Solutions Corporation",
+      "currency": "USD",
+      "price": 23.4,
+      "price_eur": 21.34,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "LOGN",
+      "name": "Logansport Financial Corp.",
+      "currency": "USD",
+      "price": 38.84,
+      "price_eur": 35.42,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "LKFT",
+      "name": "Lakefront Biotherapeutics NV",
+      "currency": "USD",
+      "price": 35.57,
+      "price_eur": 32.44,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "KRUS",
+      "name": "Kura Sushi USA, Inc.",
+      "currency": "USD",
+      "price": 25.92,
+      "price_eur": 23.64,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "KOP",
+      "name": "Koppers Holdings Inc.",
+      "currency": "USD",
+      "price": 30.86,
+      "price_eur": 28.14,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "OCTVS.XC",
+      "name": "Octave Intelligence plc",
+      "currency": "SEK",
+      "price": 219.2,
+      "price_eur": 19.42,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "JMAT.L",
+      "name": "Johnson Matthey Plc",
+      "currency": "GBp",
+      "price": 2414.0,
+      "price_eur": 28.84,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "CPGL.XC",
+      "name": "Compass Group PLC",
+      "currency": "USD",
+      "price": 35.2,
+      "price_eur": 32.1,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "CPG.L",
+      "name": "Compass Group PLC",
+      "currency": "USD",
+      "price": 35.23,
+      "price_eur": 32.13,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "0R9T.L",
+      "name": "Equasens Société anonyme",
+      "currency": "EUR",
+      "price": 27.15,
+      "price_eur": 27.15,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "0R43.L",
+      "name": "NP3 Fastigheter AB (publ)",
+      "currency": "SEK",
+      "price": 235.0,
+      "price_eur": 20.82,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "0QYF.L",
+      "name": "Comcast Corporation",
+      "currency": "USD",
+      "price": 25.9007,
+      "price_eur": 23.62,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "0OA7.L",
+      "name": "Assystem S.A.",
+      "currency": "EUR",
+      "price": 36.35,
+      "price_eur": 36.35,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "0NOL.IL",
+      "name": "Adtran Networks SE",
+      "currency": "EUR",
+      "price": 22.81,
+      "price_eur": 22.81,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "0NCA.L",
+      "name": "IVU Traffic Technologies AG",
+      "currency": "EUR",
+      "price": 27.5,
+      "price_eur": 27.5,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "0L98.L",
+      "name": "STAG Industrial, Inc.",
+      "currency": "USD",
+      "price": 38.01,
+      "price_eur": 34.67,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "0JRL.L",
+      "name": "Kohl's Corporation",
+      "currency": "USD",
+      "price": 27.06,
+      "price_eur": 24.68,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "0J2E.L",
+      "name": "HP Inc.",
+      "currency": "USD",
+      "price": 31.035,
+      "price_eur": 28.3,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "0HNZ.IL",
+      "name": "Fagron NV",
+      "currency": "EUR",
+      "price": 24.95,
+      "price_eur": 24.95,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "0HGV.L",
+      "name": "Applied Optoelectronics, Inc.",
+      "currency": "USD",
+      "price": 35.07,
+      "price_eur": 31.98,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "0HEJ.L",
+      "name": "American Homes 4 Rent",
+      "currency": "USD",
+      "price": 33.5382,
+      "price_eur": 30.59,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "YKK.DU",
+      "name": "Boreo Oyj",
+      "currency": "EUR",
+      "price": 26.6,
+      "price_eur": 26.6,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "Y7F0.DU",
+      "name": "Octave Intelligence PLC",
+      "currency": "EUR",
+      "price": 19.9,
+      "price_eur": 19.9,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "XPX.MU",
+      "name": "XPEL Inc",
+      "currency": "EUR",
+      "price": 35.64,
+      "price_eur": 35.64,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "XPX.HM",
+      "name": "XPEL Inc",
+      "currency": "EUR",
+      "price": 34.92,
+      "price_eur": 34.92,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "XPX.F",
+      "name": "XPEL, Inc.",
+      "currency": "EUR",
+      "price": 34.88,
+      "price_eur": 34.88,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "XGR2.SG",
+      "name": "Compass Group PLC",
+      "currency": "EUR",
+      "price": 32.09,
+      "price_eur": 32.09,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "XGR2.HA",
+      "name": "Compass Group PLC",
+      "currency": "EUR",
+      "price": 32.11,
+      "price_eur": 32.11,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "XGR2.F",
+      "name": "Compass Group PLC",
+      "currency": "EUR",
+      "price": 32.5,
+      "price_eur": 32.5,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "XGR2.DU",
+      "name": "Compass Group PLC",
+      "currency": "EUR",
+      "price": 32.0,
+      "price_eur": 32.0,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "XGR.DU",
+      "name": "Compass Group PLC",
+      "currency": "EUR",
+      "price": 32.0,
+      "price_eur": 32.0,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "WIIT.MI",
+      "name": "Wiit S.p.A.",
+      "currency": "EUR",
+      "price": 24.0,
+      "price_eur": 24.0,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "OCTV-SDB.ST",
+      "name": "Octave Intelligence plc",
+      "currency": "SEK",
+      "price": 220.0,
+      "price_eur": 19.49,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "BIOA-B.ST",
+      "name": "BioArctic AB (publ)",
+      "currency": "SEK",
+      "price": 322.8,
+      "price_eur": 28.6,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "BAVA.CO",
+      "name": "Bavarian Nordic A/S",
+      "currency": "DKK",
+      "price": 253.0,
+      "price_eur": 33.82,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "OBEL.BR",
+      "name": "Orange Belgium S.A.",
+      "currency": "EUR",
+      "price": 22.9,
+      "price_eur": 22.9,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "MTC2.VI",
+      "name": "Match Group, Inc.",
+      "currency": "EUR",
+      "price": 37.02,
+      "price_eur": 37.02,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "HPQ.VI",
+      "name": "HP Inc.",
+      "currency": "EUR",
+      "price": 25.89,
+      "price_eur": 25.89,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "DRI.VI",
+      "name": "1&1 AG",
+      "currency": "EUR",
+      "price": 25.25,
+      "price_eur": 25.25,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "CAI.VI",
+      "name": "CA Immobilien Anlagen AG",
+      "currency": "EUR",
+      "price": 20.85,
+      "price_eur": 20.85,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "BAVA.VI",
+      "name": "Bavarian Nordic A/S",
+      "currency": "EUR",
+      "price": 33.82,
+      "price_eur": 33.82,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "SHELL.PR",
+      "name": "Shell plc",
+      "currency": "CZK",
+      "price": 950.0,
+      "price_eur": 38.87,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    },
+    {
+      "symbol": "KOFOL.PR",
+      "name": "Kofola CeskoSlovensko a.s.",
+      "currency": "CZK",
+      "price": 500.0,
+      "price_eur": 20.46,
+      "date": "2026-11-25",
+      "ema20": null,
+      "macd": true
+    }
+  ]
 }
